@@ -10,7 +10,7 @@ module.exports=function () {
     });
 };
 function readData(filename, callback) {
-    fs.readFile(path.join(__dirname, "/data/", filename), "utf-8", ((err, data) => {
+    fs.readFile(path.join(__dirname, "../data/", filename), "utf-8", ((err, data) => {
         if (err) {
             console.log(err.stack);
             callback();

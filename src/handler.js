@@ -4,10 +4,10 @@ const queryString = require('querystring');
 
 
 module.exports.index = function (req,res) {
-    res.render(path.join(__dirname, "/views/Index.html"), {"list": list});
+    res.render(path.join(__dirname, "../views/Index.html"), {"list": list});
 };
 module.exports.submit = function (req,res) {
-    res.render(path.join(__dirname, "/views/Submit.html"));
+    res.render(path.join(__dirname, "../views/Submit.html"));
 };
 module.exports.item = function (req,res) {
     let id = req.queryObj.id;
@@ -15,9 +15,9 @@ module.exports.item = function (req,res) {
         res.end("Id must be a number!");
     }
     if (!list[id]) {
-        res.render(path.join(__dirname, "/views/404.html"));
+        res.render(path.join(__dirname, "../views/404.html"));
     }
-    res.render(path.join(__dirname, "/views/Item.html"), {news: list[id]});
+    res.render(path.join(__dirname, "../views/Item.html"), {news: list[id]});
 };
 module.exports.static = function (req,res) {
     res.render(path.join(__dirname, req.url));
@@ -44,11 +44,11 @@ module.exports.add = function (req,res) {
     });
 };
 module.exports.error = function (req,res) {
-    res.render(path.join(__dirname, "/views/404.html"));
+    res.render(path.join(__dirname, "../views/404.html"));
 };
 
 function writeData(filename, data, callback) {
-    fs.writeFile(path.join(__dirname, "/data/", filename), data, (err) => {
+    fs.writeFile(path.join(__dirname, "../data/", filename), data, (err) => {
         callback(err);
     });
 }

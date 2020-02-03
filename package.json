@@ -1,11 +1,27 @@
 {
   "name": "news",
   "version": "1.0.0",
-  "dependencies": {
-    "mime": "^2.4.4"
+  "description": "Node news",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/12end/node-news.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/12end/node-news/issues"
+  },
+  "homepage": "https://github.com/12end/node-news#readme",
+  "dependencies": {
+    "express": "^4.17.1",
     "mime": "^2.4.4",
     "underscore": "^1.9.2"
+  },
+  "devDependencies": {
+    "ejs": "^3.0.1"
   }
 }

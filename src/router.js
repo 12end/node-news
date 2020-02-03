@@ -1,19 +1,14 @@
 const handler = require('./handler');
+const express = require('express');
 
-module.exports = function (req,res) {
+let router = express.Router();
 
-    if (req.pathname === '/' || req.pathname === '/index' && req.method === 'get') {
-        handler.index(req,res,list);
-    } else if (req.pathname === '/submit' && req.method === 'get') {
-        handler.submit(req,res);
-    } else if (req.pathname.startsWith('/item') && req.method === 'get') {
-        handler.item(req,res);
-    } else if (req.pathname.startsWith("/resources/")) {
-        handler.static(req,res);
-    } else if (req.pathname === ('/add') && req.method === 'post') {
-        handler.add(req,res);
-    } else {
-        handler.error(req,res);
-    }
-};
+//router.use('',extend);
+router.use('/resources',express.static('resources'));
+router.get('/[index]?',handler.index);
+router.get('/submit',handler.submit);
+router.get('/item/:id',handler.item);
+router.post('/add',handler.add);
+router.use('',handler.error);
 
+module.exports=router;

@@ -1,0 +1,11 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "dependencies": {
+    "mime": "^2.4.4"
+  },
+  "devDependencies": {
+    "mime": "^2.4.4",
+    "underscore": "^1.9.2"
+  }
+}

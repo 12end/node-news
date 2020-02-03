@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>news</title>
+</head>
+<body>
+    <h1 style="color: green">News!</h1>
+    <% for (var i = 0;i < list.length; i++) {%>
+    <tr><a href="/Item?id=<%= i %>"><%- list[i].title %></a></tr>
+    <%}%>
+</body>
+</html>

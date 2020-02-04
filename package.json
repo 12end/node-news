@@ -19,9 +19,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "mime": "^2.4.4",
-    "underscore": "^1.9.2"
+    "underscore": "^1.9.2",
+    "body-parser": "latest"
   },
   "devDependencies": {
-    "ejs": "^3.0.1"
+    "ejs": "^3.0.1",
+    "mongodb": "^3.5.2"
   }
 }

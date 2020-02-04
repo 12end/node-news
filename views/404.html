@@ -5,6 +5,9 @@
     <title>404 Not Found</title>
 </head>
 <body>
-    <h1 style="color: red">404 Not Found</h1>
+    <h1 style="color: red">404 Not Found</h1><br>
+    <% if (locals.message ) { %>
+    <h2 style="color: black"><% locals.message %></h2>
+    <% } %>
 </body>
 </html>

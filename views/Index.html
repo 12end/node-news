@@ -7,7 +7,7 @@
 <body>
     <h1 style="color: green">News!</h1>
     <% for (var i = 0;i < list.length; i++) {%>
-    <tr><a href="/Item/<%= i %>"><%- list[i].title %></a></tr>
+    <tr><a href="/Item/<%= list[i]._id.toHexString() %>"><%- list[i].title %></a></tr>
     <%}%>
 </body>
 </html>

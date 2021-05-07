@@ -19,7 +19,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mime": "^2.4.4",
-    "underscore": "^1.9.2",
+    "underscore": "^1.12.1",
     "body-parser": "latest"
   },
   "devDependencies": {
